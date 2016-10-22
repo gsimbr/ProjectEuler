@@ -38,6 +38,6 @@ def sum_multiples(threshold, numbers):
 
 if __name__ == '__main__':
     numbers = [3, 5]
-    threshold = 1000
+    threshold = 10000
     my_sum = sum_multiples(threshold, numbers)
     print my_sum
