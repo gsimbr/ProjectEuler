@@ -1,5 +1,3 @@
-import numpy as np
-
 
 def find_multiples(threshold, number):
     """
@@ -11,13 +9,9 @@ def find_multiples(threshold, number):
     :return: An array with all the multiples of number up to threshold
     """
     num = threshold // number
-    if threshhold % number == 0:
+    if threshold % number == 0:
         num -= 1
-    mult_array = np.ndarray(num, dtype=int)
-    for i in range(num):
-        mult_array[i] = number*(i+1)
-
-    print mult_array
+    mult_array = [number*(i+1) for i in range(num)]
 
     return mult_array
 
@@ -38,14 +32,12 @@ def sum_multiples(threshold, numbers):
     for num in numbers:
         mult.update(find_multiples(threshold, num))
 
-    print mult
-
     my_sum = sum(mult)
 
     return my_sum
 
 if __name__ == '__main__':
     numbers = [3, 5]
-    threshhold = 1000
-    my_sum = sum_multiples(threshhold, numbers)
+    threshold = 1000
+    my_sum = sum_multiples(threshold, numbers)
     print my_sum
