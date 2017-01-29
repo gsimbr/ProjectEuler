@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 
 def find_largest_palindrome_product(no_digits):
@@ -14,6 +15,9 @@ def find_largest_palindrome_product(no_digits):
 
 
 if __name__ == '__main__':
+    start = time.time()
     num1, num2 = find_largest_palindrome_product(3)
+    end = time.time()
     print num1, num2
     print num1*num2
+    print end-start
